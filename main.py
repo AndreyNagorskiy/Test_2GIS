@@ -3,7 +3,7 @@ from datetime import datetime, date, timedelta
 from memory_profiler import profile
 
 
-XML_FILE_PATH = 'small_memory_test.xml'
+XML_FILE_PATH = 'big_memory_test.xml'
 
 
 # @profile
@@ -43,7 +43,7 @@ def handle_input(count):
         truncated_end_time = date(end_time.year, end_time.month, end_time.day)
         get_data_by_date_and_names(XML_FILE_PATH, start_time, end_time, employees,truncated_start_time, truncated_end_time)
 
-
+# @profile
 def get_data(file_path):
     sum_seconds = 0
     for event, elem in ET.iterparse(file_path, events=('end',), tag='person'):
@@ -128,11 +128,11 @@ def convert_time(seconds):
 
 
 if __name__ == "__main__":
-    print('Этот скрипт подразумевает следующие возможности:')
+    print('В этом скрипте есть следующие возможности:')
     print('1 - общее время всех сотрудников(без фильтров);')
     print('2 - фильтр по сотрудникам;')
     print('3 - фильтр по интервалу дат;')
     print('4 - фильтр по сотрудникам и интервалу дат;')
 
-    count = int(input('Введите цифру для выбора реализации: '))
+    count = int(input('Выберите фильтр: '))
     handle_input(count)
