@@ -21,7 +21,7 @@
 <li>very_big_memory_test.xml - 124 МБ<br><br><img src="https://sun4-12.userapi.com/XrC2M8bqMo1lj1wrAFR5kUNIpnH_RKn_72PPyA/Eca0SAzjzPI.jpg"><br><br></li> 
 </ul>
 <h2>Развертывание</h2>
-Для развертывания приложения в Docker добавлен dockerfile на основе которого можно создать образ командой:<br> 
-<i>docker build -t -it image_name</i><br>
+Для развертывания приложения в Docker добавлен dockerfile на основе которого можно cобрать образ командой:<br> 
+<i>docker build -t image_name .</i><br>
 Затем запустить образ:<br>
 <i>docker run -t -it image_name</i>
